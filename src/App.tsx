@@ -16,14 +16,14 @@ class App extends React.Component<{}, State> {
   }
 
   handleFile(file: File) {
-    this.setState({csvFile: file})
+    this.setState({ csvFile: file })
   }
 
   render() {
     return (
       <div className="App">
-        <FileSelector onChange={(file: File) => this.handleFile(file)}/>
-        <Preview file={this.state.csvFile}/>
+        <FileSelector onChange={(file: File) => this.handleFile(file)} />
+        <Preview file={this.state.csvFile} />
       </div>
     );
   }
