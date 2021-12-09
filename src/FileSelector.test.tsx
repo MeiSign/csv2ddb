@@ -7,9 +7,7 @@ test('call onChange callback after csv file was selected', () => {
   const mockChangeCallback = jest.fn();
 
   render(<FileSelector onChange={mockChangeCallback}/>);
-  
   const fileInput = screen.getByTestId('file-input')
-
   
   fireEvent.change(fileInput, {
     target: { files: [file] },

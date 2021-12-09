@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import FileSelector from './FileSelector';
-import PreviewTable from './PreviewTable';
+import Preview from './Preview';
 
 interface State {
   csvFile?: File
@@ -23,7 +23,7 @@ class App extends React.Component<{}, State> {
     return (
       <div className="App">
         <FileSelector onChange={(file: File) => this.handleFile(file)}/>
-        <PreviewTable fileName={this.state.csvFile?.name}/>
+        <Preview file={this.state.csvFile}/>
       </div>
     );
   }
